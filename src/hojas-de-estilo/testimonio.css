@@ -8,3 +8,20 @@
     background-color: #fff; /*Si los 6 son iguales, se puede resumir a 3*/
     box-shadow: 0 3px 13px 1px rgb(0 0 0 / 9%)
 }
+
+.imagen-testimonio {
+    height: 100%;
+    width: auto;
+}
+
+.contenedor-texto-testimonio {
+    text-align: center;
+    padding: 40px;
+    font-family: Lato, sans-serif;
+    font-weight: 400;
+    line-height: 1.5rem;
+}
+
+.nombre-testimonio {
+    font-size: 1.3rem;
+}
