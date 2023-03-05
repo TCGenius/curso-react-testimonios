@@ -1,17 +1,23 @@
-import React from 'react';
+import React from 'react'; //Esto desde 2020 no es necesario
 import '../hojas-de-estilo/testimonio.css';
 
-function Testimonio() {
+function Testimonio(props) { //Cuando pongo "props", le voy agregando luego propiedades a este objeto que se van a reemplazar al renderizarse.
   return (
     <div className='contenedor-testimonio'>
       <img 
       className='imagen-testimonio' 
-      src={require('../imagenes/testimonio-emma.png')} 
-      alt='Foto de Emma'/>
+      src={require(`../imagenes/testimonio-${props.imagen}.png`)} 
+      alt={`Foto de ${props.nombre}`} />
       <div className='contenedor-texto-testimonio'>
-        <p className='nombre-testimonio'>Emma Bostian en Suecia</p>
-        <p className='cargo-testimonio'>Ingeniera de Software en Spotify</p>
-        <p className='texto-testimonio'>"I've always struggled with learning JavaScript. I've taken many courses but freeCodeCamp's course was the one which stuck. Studying JavaScript as well as data structures and algorithms on freeCodeCamp gave me the skills and confidence I needed to land my dream job as a software engineer at Spotify."</p>
+        <p className='nombre-testimonio'>
+          <strong>{props.nombre}</strong> en {props.pais} 
+          </p> 
+        <p className='cargo-testimonio'>
+          {props.cargo} en <strong>{props.empresa}</strong>
+          </p>
+        <p className='texto-testimonio'>
+          "{props.testimonio}"
+          </p>
       </div>
     </div>
   );

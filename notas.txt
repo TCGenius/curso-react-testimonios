@@ -1,0 +1,3 @@
+Los props son las propiedades que se pasan a un componente, en forma de objeto.
+
+Es decir, si yo quiero tener un prop que se llame nombre, tengo que poner props.nombre. Esto va en código de JS dentro del componente (entre {})
